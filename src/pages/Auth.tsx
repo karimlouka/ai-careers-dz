@@ -89,6 +89,9 @@ export default function Auth() {
                   <User className="w-10 h-10 mx-auto mb-3 text-primary group-hover:scale-110 transition-transform" />
                   <h3 className="font-semibold text-foreground">{t('auth.roleSeeker')}</h3>
                   <p className="text-sm text-muted-foreground mt-1">{t('auth.roleSeekerDesc')}</p>
+                  <div className="mt-3 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold">
+                    1,000 DZD
+                  </div>
                 </button>
                 <button
                   onClick={() => setSelectedRole('company')}
@@ -97,6 +100,9 @@ export default function Auth() {
                   <Building2 className="w-10 h-10 mx-auto mb-3 text-accent group-hover:scale-110 transition-transform" />
                   <h3 className="font-semibold text-foreground">{t('auth.roleCompany')}</h3>
                   <p className="text-sm text-muted-foreground mt-1">{t('auth.roleCompanyDesc')}</p>
+                  <div className="mt-3 px-3 py-1.5 rounded-full bg-accent/10 text-accent text-xs font-semibold">
+                    10,000 DZD / {dir === 'rtl' ? 'سنوياً' : dir === 'ltr' && t('lang') === 'العربية' ? 'سنوياً' : 'an'}
+                  </div>
                 </button>
               </div>
             </div>
